@@ -60,13 +60,13 @@ class MainActivity : AppCompatActivity(), Ramyeon, View.OnClickListener {
                 setWater()
 
                 if (welshOnionCb!!.isChecked){
-                    welshOnion = true
+                    welshOnion = Ingredient.setWelshOnion()
                 }
                 if (eggCb!!.isChecked){
-                    egg = true
+                    egg = Ingredient.setEgg()
                 }
                 if (kimchiCb!!.isChecked){
-                    kimchi = true
+                    kimchi = Ingredient.setKimChi()
                 }
 
                 controlEnabled(false)
@@ -133,18 +133,18 @@ class MainActivity : AppCompatActivity(), Ramyeon, View.OnClickListener {
                     callToast()
                 } else if (time == 210){
                     if (egg){
-                        status += Ingredient.setEgg()
+                        status += " / 계란 추가"
                         egg_iv!!.visibility = View.VISIBLE
                     }
                     if (welshOnion){
-                        status += Ingredient.setWelshOnion()
+                        status += " / 대파 추가"
                         welsh_onion_iv!!.visibility = View.VISIBLE
                     }
                 } else if (time == 240){
                     stopTimer()
                     status = "요리 완료"
                     if (kimchi){
-                        status += Ingredient.setKimChi()
+                        status += " / 김치 곁들임"
                     }
                     welsh_onion_iv!!.visibility = View.INVISIBLE
                     egg_iv!!.visibility = View.INVISIBLE
