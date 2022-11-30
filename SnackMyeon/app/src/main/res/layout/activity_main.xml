@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- ConstraintLayout : 상하좌우 좌우가운데 정렬을 할수 있도록 하게하는 Layout
+         LinearLayout : 상대적 배치를 하게하는 Layout. 수평,수직 정렬을 할수 있게 한다
+         FrameLayout : View의 중첩을 할 수 있게하는 Layout  -->
+
     <Button
         android:id="@+id/order_bt"
         android:layout_width="100dp"
